@@ -6,6 +6,9 @@ public:
     void f(int m_a){
         (*this).m_a = m_a;
     }
+    void ff(int m_a){
+        A::m_a = m_a;
+    }
     void f_get_a(){
       std::cout<< this->m_a << std::endl;  
     }
@@ -14,6 +17,7 @@ public:
 int main(){
     A a;
     a.f(5);
+    a.ff(4);
     a.f_get_a();
     return 0;
 }
